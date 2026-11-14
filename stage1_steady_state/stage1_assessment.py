@@ -1,5 +1,9 @@
 import numpy as np;
 import matplotlib.pyplot as plt;
+from pathlib import Path
+
+IMAGES = Path(__file__).parent / "images"
+IMAGES.mkdir(exist_ok=True)
 
 # Question:
 # A column is fed 5000 kg/h of a mixture that is 30 wt% ethanol and 70 wt%
@@ -28,4 +32,5 @@ plt.plot(feed_fractions, B_values);
 plt.xlabel("Feed composition, F_e (mass fraction ethanol)")
 plt.ylabel("Bottoms flow rate, B (kg/h)")
 plt.title("Effect of feed composition on bottoms flow rate")
+plt.savefig(IMAGES / "b_vs_feed_composition.png", dpi=150, bbox_inches="tight")
 plt.show();

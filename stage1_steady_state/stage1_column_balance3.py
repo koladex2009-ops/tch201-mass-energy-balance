@@ -1,5 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from pathlib import Path
+
+IMAGES = Path(__file__).parent / "images"
+IMAGES.mkdir(exist_ok=True)
 
 
 # Testing...
@@ -36,5 +40,6 @@ plt.plot(purities, D_values);
 plt.xlabel("Distillate Purity, D_m (mass fraction methanol)");
 plt.ylabel("Distillate Flow Rate, D (kg/h)");
 plt.title("Effect of distillate purity on distillate flow");
+plt.savefig(IMAGES / "d_vs_purity.png", dpi=150, bbox_inches="tight")
 plt.show();
 

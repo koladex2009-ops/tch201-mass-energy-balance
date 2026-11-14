@@ -49,3 +49,20 @@ python stage1_steady_state/stage1_column_balance3.py
 ```
 
 Each plot script saves its graph into the `images` folder next to it.
+
+
+## Stage 2: Multiple units, recycle, bypass, purge (in progress)
+
+Folder: `stage2_multiple_units/`
+
+| File | What it does |
+|---|---|
+| `example3_two_units.py` | Two-unit process (Example 3): component balances for streams 1, 2 and 3 |
+
+### Example 3: two-unit process
+
+![Example 3 flowchart](stage2_multiple_units/images/example3_problem.png)
+
+Source: TCH 201 Module 2, slide 15, University of Ilorin.
+
+Approach: do a degree-of-freedom analysis on the overall system and on each subsystem, then write component balances in order: overall (stream 3), Unit 1 (stream 1), mixing point (stream 2).
